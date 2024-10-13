@@ -1,0 +1,133 @@
+warn("This Gui Was Made With GUI to LUA, Errors popping up doing nothing wrong")
+
+local Faba_Flex_khmpre = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local FpsSetter = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+Faba_Flex_khmpre.Name = "Faba_Flex_khmpre"
+Faba_Flex_khmpre.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Faba_Flex_khmpre.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Faba_Flex_khmpre
+Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.377438515, 0, 0.291155875, 0)
+Frame.Size = UDim2.new(0, 215, 0, 133)
+
+FpsSetter.Name = "FpsSetter"
+FpsSetter.Parent = Frame
+FpsSetter.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+FpsSetter.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FpsSetter.BorderSizePixel = 0
+FpsSetter.Position = UDim2.new(0.0837209299, 0, 0.437960297, 0)
+FpsSetter.Size = UDim2.new(0, 177, 0, 35)
+FpsSetter.Font = Enum.Font.Unknown
+FpsSetter.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+FpsSetter.Text = "Set Your Fps!"
+FpsSetter.TextColor3 = Color3.fromRGB(255, 255, 255)
+FpsSetter.TextSize = 14.000
+FpsSetter.TextStrokeTransparency = 0.000
+FpsSetter.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = FpsSetter
+
+UICorner_2.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0325581394, 0, 0.0532786883, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 30)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Flex Your Fps And Ping Script"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 25.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function AQZT_fake_script() -- FpsSetter.ReturnScript 
+	local script = Instance.new('LocalScript', FpsSetter)
+
+	script.Parent.FocusLost:Connect(function()
+		local function returns()
+			local returnText = "Set A Value like 69 (Can Include Letters)"
+			if returnText then
+				return returnText
+			end
+		end
+		
+		if script.Parent.Text == nil or script.Parent.Text:match("^%s*$") then
+			script.Parent.Text = returns()
+		else
+			return nil
+		end
+	end)
+end
+coroutine.wrap(AQZT_fake_script)()
+local function MDSMYQV_fake_script() -- FpsSetter.HighwayGothicFont 
+	local script = Instance.new('LocalScript', FpsSetter)
+
+	local textLabel = script.Parent
+	local font = Font.new("rbxasset://fonts/families/HighwayGothic.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	textLabel.FontFace = font
+end
+coroutine.wrap(MDSMYQV_fake_script)()
+local function YWIRP_fake_script() -- FpsSetter.FpsSetter 
+	local script = Instance.new('LocalScript', FpsSetter)
+
+	script.Parent.FocusLost:Connect(function(enter)
+		if enter then
+			local Fps = {
+				responsive = {
+					["remoteEvent"] = game:GetService("ReplicatedStorage").FPSUpdateEventIKnowYouReCheater,
+					["getScript"] = workspace:FindFirstChild(game:GetService("Players").LocalPlayer.Name).LocalScript
+				},
+				["FPSvalue"] = nil
+			}
+				if Fps["FPSvalue"] == nil then
+					Fps["FPSvalue"] = script.Parent.Text
+					Fps.responsive["remoteEvent"]:FireServer(Fps["FPSvalue"])
+					Fps.responsive["getScript"].Enabled = false
+					local IsEnabled = true
+					local RealEnabled = false
+					if script.Parent.Text == "Set A Value like 69 (Can Include Letters)" then
+					Fps.responsive["getScript"].Enabled = true
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(YWIRP_fake_script)()
+local function MOOB_fake_script() -- Frame.uiStrokes 
+	local script = Instance.new('LocalScript', Frame)
+
+	-- Knew I can use the loops
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	local uiStroke = Instance.new("UIStroke", script.Parent)
+	uiStroke.Thickness = 3
+	local uiStroke2 = Instance.new("UIStroke", script.Parent.FpsSetter)
+	uiStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	uiStroke.Thickness = 2
+end
+coroutine.wrap(MOOB_fake_script)()
+local function SSJQKNN_fake_script() -- TextLabel.HighwayGothicFont 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	local textLabel = script.Parent
+	local font = Font.new("rbxasset://fonts/families/HighwayGothic.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	textLabel.FontFace = font
+end
+coroutine.wrap(SSJQKNN_fake_script)()
